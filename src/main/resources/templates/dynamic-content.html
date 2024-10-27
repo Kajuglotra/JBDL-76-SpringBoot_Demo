@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<p> I am in dynamic content body!!</p>
+Server Time: <span th:text="${date}" />
+<h2> Person List</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    <tr th:each="person : ${personList}">
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.name}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
